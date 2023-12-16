@@ -1,0 +1,63 @@
+21:02:22 **** Incremental Build of configuration Debug for project 1_led_toggle_addr_struct ****
+make -j4 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F401RETx -DSTM32F4 -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "1_led_toggle_addr_struct.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\manha\OneDrive\Desktop\STM32F401RE\1_led_toggle_addr_struct\STM32F401RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="1_led_toggle_addr_struct.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 1_led_toggle_addr_struct.elf
+ 
+arm-none-eabi-size  1_led_toggle_addr_struct.elf 
+arm-none-eabi-objdump -h -S 1_led_toggle_addr_struct.elf  > "1_led_toggle_addr_struct.list"
+   text	   data	    bss	    dec	    hex	filename
+    732	      8	   1568	   2308	    904	1_led_toggle_addr_struct.elf
+Finished building: default.size.stdout
+ 
+Finished building: 1_led_toggle_addr_struct.list
+ 
+21:02:37 **** Incremental Build of configuration Debug for project 1_led_toggle_addr_struct ****
+make -j4 all 
+arm-none-eabi-size  1_led_toggle_addr_struct.elf 
+   text	   data	    bss	    dec	    hex	filename
+    732	      8	   1568	   2308	    904	1_led_toggle_addr_struct.elf
+Finished building: default.size.stdout
+ 
+21:04:55 **** Incremental Build of configuration Debug for project 1_led_toggle_addr_struct ****
+make -j4 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F401RETx -DSTM32F4 -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "1_led_toggle_addr_struct.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\manha\OneDrive\Desktop\STM32F401RE\1_led_toggle_addr_struct\STM32F401RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="1_led_toggle_addr_struct.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 1_led_toggle_addr_struct.elf
+ 
+arm-none-eabi-size  1_led_toggle_addr_struct.elf 
+arm-none-eabi-objdump -h -S 1_led_toggle_addr_struct.elf  > "1_led_toggle_addr_struct.list"
+   text	   data	    bss	    dec	    hex	filename
+    732	      8	   1568	   2308	    904	1_led_toggle_addr_struct.elf
+Finished building: default.size.stdout
+ 
+Finished building: 1_led_toggle_addr_struct.list
+ 
+22:05:32 **** Incremental Build of configuration Debug for project 1_led_toggle_addr_struct ****
+make -j4 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F401RETx -DSTM32F4 -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "1_led_toggle_addr_struct.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\manha\OneDrive\Desktop\STM32F401RE\1_led_toggle_addr_struct\STM32F401RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="1_led_toggle_addr_struct.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 1_led_toggle_addr_struct.elf
+ 
+arm-none-eabi-size  1_led_toggle_addr_struct.elf 
+arm-none-eabi-objdump -h -S 1_led_toggle_addr_struct.elf  > "1_led_toggle_addr_struct.list"
+   text	   data	    bss	    dec	    hex	filename
+    736	      8	   1568	   2312	    908	1_led_toggle_addr_struct.elf
+Finished building: default.size.stdout
+ 
+Finished building: 1_led_toggle_addr_struct.list
+ 
+22:06:14 **** Incremental Build of configuration Debug for project 0_led_toggle_addr ****
+make -j4 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F401RETx -DSTM32F4 -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "0_led_toggle_addr.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\manha\OneDrive\Desktop\STM32F401RE\0_led_toggle_addr\STM32F401RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="0_led_toggle_addr.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 0_led_toggle_addr.elf
+ 
+arm-none-eabi-size  0_led_toggle_addr.elf 
+arm-none-eabi-objdump -h -S 0_led_toggle_addr.elf  > "0_led_toggle_addr.list"
+   text	   data	    bss	    dec	    hex	filename
+    740	      8	   1568	   2316	    90c	0_led_toggle_addr.elf
+Finished building: default.size.stdout
+ 
+Finished building: 0_led_toggle_addr.list
+ 
