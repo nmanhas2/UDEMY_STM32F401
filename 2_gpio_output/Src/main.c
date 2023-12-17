@@ -14,7 +14,7 @@
 #include "stm32f4xx.h" //including header file from CMSIS
 
 #define GPIOAEN				(1U <<0) //need to enable GPIOA on the AHB1ENR
-#define PIN5				(1U<<5)  //PIN5 is the
+#define PIN5				(1U<<5)
 #define LED_PIN				PIN5	 //using LED2, which corresponds to PIN5
 
 int main(void){
