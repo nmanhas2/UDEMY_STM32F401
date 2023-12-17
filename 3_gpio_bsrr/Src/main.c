@@ -1,5 +1,16 @@
-//STM32F401
-//essentially the same as the project 0 and project 1, just implementing the CMSIS header files
+/////////////////////////////////////////////////////////////////////////////
+
+/// Using: STM32F401 NUCLEO Board
+
+///	Following Section 2: General Purpose (https://www.udemy.com/course/embedded-systems-bare-metal-programming/)
+
+///	Purpose: Utilizing the CMSIS header files to create a blinking LED project,
+
+//	this is the same as project 1 and project 0
+
+/// Author: Nubal Manhas
+
+/////////////////////////////////////////////////////////////////////////////
 #include "stm32f4xx.h"
 
 #define GPIOAEN				(1U <<0)

@@ -1,3 +1,17 @@
+/////////////////////////////////////////////////////////////////////////////
+
+/// Using: STM32F401 NUCLEO Board
+
+///	Following Section 1: (https://www.udemy.com/course/embedded-systems-bare-metal-programming/)
+
+///	Purpose: Utilizing the Memory Addresses from the Reference Manual + Datasheet to construct
+
+//	peripheral registers for GPIO, and testing this through blinking an LED
+
+/// Author: Nubal Manhas
+
+/////////////////////////////////////////////////////////////////////////////
+
 //STM32F401 NUCLEO DEV Board
 //Where is the led connected?
 //Port: PortA
