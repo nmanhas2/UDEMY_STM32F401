@@ -378,3 +378,9 @@ This warning can be switched off on the Team > Git > Confirmations and Warnings 
 
 !ENTRY org.eclipse.cdt.core 1 0 2023-12-16 19:47:09.953
 !MESSAGE Indexed '3_gpio_bsrr' (3 sources, 62 headers) in 1.07 sec: 3,077 declarations; 5,144 references; 0 unresolved inclusions; 1 syntax errors; 2 unresolved names (0.024%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2023-12-16 21:00:27.323
+!MESSAGE Indexed '4_gpio_input' (3 sources, 62 headers) in 0.776 sec: 3,078 declarations; 5,152 references; 0 unresolved inclusions; 1 syntax errors; 2 unresolved names (0.024%)
+
+!ENTRY com.st.stm32cube.ide.mcu.debug.launch 2 0 2023-12-16 21:19:51.840
+!MESSAGE Won't launch debug session since we failed to locate the binary.

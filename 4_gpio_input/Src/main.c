@@ -45,6 +45,7 @@ int main(void){
 	while(1){
 		//check to see if button (ie. PC13) is high, using IDR
 		//based on Section 8.4.5 in Reference Manual
+		//this button happens to be active low (ie. initially high)
 		if(GPIOC->IDR & BTN_PIN){
 			//Based on Section 8.4.7 in Reference Manual, BSRR has 16 bits reserved for
 			//setting a bit corresponding to each of the ODR bits, with the remaining 16
