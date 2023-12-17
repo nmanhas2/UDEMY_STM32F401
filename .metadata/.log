@@ -375,3 +375,6 @@ This warning can be switched off on the Team > Git > Confirmations and Warnings 
 
 !ENTRY org.eclipse.cdt.core 1 0 2023-12-16 19:23:55.794
 !MESSAGE Indexed '2_gpio_output' (3 sources, 53 headers) in 1.9 sec: 1,950 declarations; 2,832 references; 0 unresolved inclusions; 2 syntax errors; 2 unresolved names (0.042%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2023-12-16 19:47:09.953
+!MESSAGE Indexed '3_gpio_bsrr' (3 sources, 62 headers) in 1.07 sec: 3,077 declarations; 5,144 references; 0 unresolved inclusions; 1 syntax errors; 2 unresolved names (0.024%)
