@@ -1,14 +1,21 @@
-19:23:39 **** Incremental Build of configuration Debug for project 6_uart_printf ****
+19:44:07 **** Incremental Build of configuration Debug for project 7_uart_modular ****
 make -j12 all 
-arm-none-eabi-size  6_uart_printf.elf 
+arm-none-eabi-gcc "../Src/uart.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32F401xE -c -I"C:/Users/manha/OneDrive/Desktop/STM32F401RE/chip_headers/CMSIS/Include" -I"C:/Users/manha/OneDrive/Desktop/STM32F401RE/chip_headers/CMSIS/Device/ST/STM32F4xx/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/uart.d" -MT"Src/uart.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/uart.o"
+arm-none-eabi-gcc -o "7_uart_modular.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\manha\OneDrive\Desktop\STM32F401RE\7_uart_modular\STM32F401RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="7_uart_modular.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 7_uart_modular.elf
+ 
+arm-none-eabi-size  7_uart_modular.elf 
+arm-none-eabi-objdump -h -S 7_uart_modular.elf  > "7_uart_modular.list"
    text	   data	    bss	    dec	    hex	filename
-   5152	    100	   1900	   7152	   1bf0	6_uart_printf.elf
+   5156	    100	   1900	   7156	   1bf4	7_uart_modular.elf
 Finished building: default.size.stdout
  
-19:23:46 **** Incremental Build of configuration Debug for project 6_uart_printf ****
+Finished building: 7_uart_modular.list
+ 
+19:44:25 **** Incremental Build of configuration Debug for project 7_uart_modular ****
 make -j12 all 
-arm-none-eabi-size  6_uart_printf.elf 
+arm-none-eabi-size  7_uart_modular.elf 
    text	   data	    bss	    dec	    hex	filename
-   5152	    100	   1900	   7152	   1bf0	6_uart_printf.elf
+   5156	    100	   1900	   7156	   1bf4	7_uart_modular.elf
 Finished building: default.size.stdout
  
