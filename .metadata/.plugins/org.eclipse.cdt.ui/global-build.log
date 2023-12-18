@@ -1,49 +1,14 @@
-19:17:12 **** Incremental Build of configuration Debug for project 5_uart_tx ****
+19:23:39 **** Incremental Build of configuration Debug for project 6_uart_printf ****
 make -j12 all 
-arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32F401xE -c -I"C:/Users/manha/OneDrive/Desktop/STM32F401RE/chip_headers/CMSIS/Include" -I"C:/Users/manha/OneDrive/Desktop/STM32F401RE/chip_headers/CMSIS/Device/ST/STM32F4xx/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
-arm-none-eabi-gcc -o "5_uart_tx.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\manha\OneDrive\Desktop\STM32F401RE\5_uart_tx\STM32F401RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="5_uart_tx.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: 5_uart_tx.elf
- 
-arm-none-eabi-size  5_uart_tx.elf 
-arm-none-eabi-objdump -h -S 5_uart_tx.elf  > "5_uart_tx.list"
+arm-none-eabi-size  6_uart_printf.elf 
    text	   data	    bss	    dec	    hex	filename
-    940	      8	   1568	   2516	    9d4	5_uart_tx.elf
+   5152	    100	   1900	   7152	   1bf0	6_uart_printf.elf
 Finished building: default.size.stdout
  
-Finished building: 5_uart_tx.list
- 
-19:17:21 **** Incremental Build of configuration Debug for project 4_gpio_input ****
+19:23:46 **** Incremental Build of configuration Debug for project 6_uart_printf ****
 make -j12 all 
-arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32F401xE -c -I"C:/Users/manha/OneDrive/Desktop/STM32F401RE/chip_headers/CMSIS/Include" -I"C:/Users/manha/OneDrive/Desktop/STM32F401RE/chip_headers/CMSIS/Device/ST/STM32F4xx/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
-arm-none-eabi-gcc -o "4_gpio_input.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\manha\OneDrive\Desktop\STM32F401RE\4_gpio_input\STM32F401RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="4_gpio_input.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: 4_gpio_input.elf
- 
-arm-none-eabi-size  4_gpio_input.elf 
-arm-none-eabi-objdump -h -S 4_gpio_input.elf  > "4_gpio_input.list"
+arm-none-eabi-size  6_uart_printf.elf 
    text	   data	    bss	    dec	    hex	filename
-    768	      8	   1568	   2344	    928	4_gpio_input.elf
+   5152	    100	   1900	   7152	   1bf0	6_uart_printf.elf
 Finished building: default.size.stdout
- 
-Finished building: 4_gpio_input.list
- 
-19:17:54 **** Incremental Build of configuration Debug for project 5_uart_tx ****
-make -j12 all 
-arm-none-eabi-size  5_uart_tx.elf 
-   text	   data	    bss	    dec	    hex	filename
-    940	      8	   1568	   2516	    9d4	5_uart_tx.elf
-Finished building: default.size.stdout
- 
-19:18:44 **** Incremental Build of configuration Debug for project 5_uart_tx ****
-make -j12 all 
-arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32F401xE -c -I"C:/Users/manha/OneDrive/Desktop/STM32F401RE/chip_headers/CMSIS/Include" -I"C:/Users/manha/OneDrive/Desktop/STM32F401RE/chip_headers/CMSIS/Device/ST/STM32F4xx/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
-arm-none-eabi-gcc -o "5_uart_tx.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\manha\OneDrive\Desktop\STM32F401RE\5_uart_tx\STM32F401RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="5_uart_tx.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: 5_uart_tx.elf
- 
-arm-none-eabi-size  5_uart_tx.elf 
-arm-none-eabi-objdump -h -S 5_uart_tx.elf  > "5_uart_tx.list"
-   text	   data	    bss	    dec	    hex	filename
-    940	      8	   1568	   2516	    9d4	5_uart_tx.elf
-Finished building: default.size.stdout
- 
-Finished building: 5_uart_tx.list
  

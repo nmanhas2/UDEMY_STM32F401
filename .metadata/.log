@@ -409,3 +409,6 @@ This warning can be switched off on the Team > Git > Confirmations and Warnings 
 
 !ENTRY org.eclipse.cdt.core 1 0 2023-12-17 17:38:44.554
 !MESSAGE Indexed '5_uart_tx' (5 sources, 60 headers) in 2.18 sec: 2,718 declarations; 3,849 references; 3 unresolved inclusions; 30 syntax errors; 581 unresolved names (8.1%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2023-12-17 19:21:34.191
+!MESSAGE Indexed '6_uart_printf' (5 sources, 60 headers) in 0.753 sec: 2,760 declarations; 3,937 references; 4 unresolved inclusions; 30 syntax errors; 591 unresolved names (8.1%)
