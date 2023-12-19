@@ -2,9 +2,9 @@
 
 /// Using: STM32F401 NUCLEO Board
 
-///	Following Section 5: ADC (https://www.udemy.com/course/embedded-systems-bare-metal-programming/)
+///	Following Section 6: SYSTICK Timer Library (https://www.udemy.com/course/embedded-systems-bare-metal-programming/)
 
-///	Purpose: Testing ADC library for continuous conversion, using PA1 as an analog input to read
+///	Purpose: Testing a Library for SYSTICK by toggling and LED and showing a message in UART every second
 
 /// Author: Nubal Manhas
 
@@ -18,18 +18,32 @@
 #include <stdint.h> //need to include because we're using uint32_t
 #include "../Inc/uart.h"
 #include "stm32f4xx.h"
-#include "../Inc/adc.h"
+#include "../Inc/systick.h"
 
-uint32_t sensor_value;
+//GPIOAEN bit within RCC_AHB1ENR (section 6.3.9 in reference manual)
+#define GPIOAEN						(1U<<0) //0b 0000 0000 0000 0000 0000 0000 0000 0001
+#define PIN5						(1U<<5) //PIN5 based on ODR, since we want that as an output
+#define LED_PIN						PIN5
 
 int main(void){
 	uart2_tx_init();
-	pa1_adc_init();
-	start_continuous();
+
+	/* Enable clock access to GPIOA*/
+	//don't just assign RCC_AHB1ENR = GPIOEN,
+    //since that will overwrite everything else too
+	RCC->AHB1ENR |= GPIOAEN;
+
+	/* set PA5 as output*/
+	//based on section 8.4.1 in reference manual, PA5 = MODER5, therefore
+	//to set PA5 to an output, MODER5 (ie. bits 10 and 11) = 01
+	GPIOA->MODER |= (1U << 10); //set MODER bit 10 to 1
+	GPIOA->MODER &= ~(1U<<11);	//set MODER bit 11 to 0
+
 	while(1)
 	{
-		sensor_value = adc_read();
-		printf("Sensor value: %d \n\r", (int)sensor_value);
+		printf("A second has passed \n\r");
+		GPIOA->ODR ^= LED_PIN;
+		systickDelayMS(1000);
 	}
 }
 
