@@ -1227,3 +1227,16 @@ C Model Exception: C Model Status [Element tim.c does not exist.]
 
 !ENTRY org.eclipse.cdt.core 1 0 2023-12-20 18:50:48.175
 !MESSAGE Indexed '13_timer_output_compare' (7 sources, 68 headers) in 0.827 sec: 3,276 declarations; 5,672 references; 0 unresolved inclusions; 1 syntax errors; 2 unresolved names (0.022%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2023-12-20 19:16:36.519
+!MESSAGE Indexed '14_timer_input_capture' (7 sources, 68 headers) in 0.69 sec: 3,280 declarations; 5,701 references; 0 unresolved inclusions; 1 syntax errors; 2 unresolved names (0.022%)
+
+!ENTRY org.eclipse.cdt.dsf.gdb 4 10004 2023-12-20 19:47:44.088
+!MESSAGE Failed to execute MI command:
+-stack-list-frames 0 0
+Error message from debugger back end:
+Invalid thread id: 1
+!STACK 0
+java.lang.Exception: Invalid thread id: 1
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:1024)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:853)
