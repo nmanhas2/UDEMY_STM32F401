@@ -1224,3 +1224,6 @@ C Model Exception: C Model Status [Element tim.c does not exist.]
 	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:207)
 !SUBENTRY 1 org.eclipse.cdt.core 4 969 2023-12-20 18:42:16.262
 !MESSAGE Element tim.c does not exist.
+
+!ENTRY org.eclipse.cdt.core 1 0 2023-12-20 18:50:48.175
+!MESSAGE Indexed '13_timer_output_compare' (7 sources, 68 headers) in 0.827 sec: 3,276 declarations; 5,672 references; 0 unresolved inclusions; 1 syntax errors; 2 unresolved names (0.022%)
