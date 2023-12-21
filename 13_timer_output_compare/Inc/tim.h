@@ -4,7 +4,7 @@
 
 ///	Following Section 6: General Purpose Timers (https://www.udemy.com/course/embedded-systems-bare-metal-programming/)
 
-///	Purpose: Creating a Library for Timer Driver
+///	Purpose: Creating a Library for Timer Driver, with output compare
 /// Author: Nubal Manhas
 
 /////////////////////////////////////////////////////////////////////////////
