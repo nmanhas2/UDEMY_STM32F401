@@ -1,21 +1,27 @@
-15:45:38 **** Incremental Build of configuration Debug for project 11_systick_delay ****
+18:47:02 **** Build of configuration Debug for project 12_timers ****
 make -j12 all 
+arm-none-eabi-gcc "../Src/adc.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32F401xE -c -I"C:/Users/manha/OneDrive/Desktop/STM32F401RE/chip_headers/CMSIS/Include" -I"C:/Users/manha/OneDrive/Desktop/STM32F401RE/chip_headers/CMSIS/Device/ST/STM32F4xx/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/adc.d" -MT"Src/adc.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/adc.o"
 arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32F401xE -c -I"C:/Users/manha/OneDrive/Desktop/STM32F401RE/chip_headers/CMSIS/Include" -I"C:/Users/manha/OneDrive/Desktop/STM32F401RE/chip_headers/CMSIS/Device/ST/STM32F4xx/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
-arm-none-eabi-gcc -o "11_systick_delay.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\manha\OneDrive\Desktop\STM32F401RE\11_systick_delay\STM32F401RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="11_systick_delay.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: 11_systick_delay.elf
+arm-none-eabi-gcc "../Src/syscalls.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32F401xE -c -I"C:/Users/manha/OneDrive/Desktop/STM32F401RE/chip_headers/CMSIS/Include" -I"C:/Users/manha/OneDrive/Desktop/STM32F401RE/chip_headers/CMSIS/Device/ST/STM32F4xx/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/syscalls.d" -MT"Src/syscalls.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/syscalls.o"
+arm-none-eabi-gcc "../Src/sysmem.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32F401xE -c -I"C:/Users/manha/OneDrive/Desktop/STM32F401RE/chip_headers/CMSIS/Include" -I"C:/Users/manha/OneDrive/Desktop/STM32F401RE/chip_headers/CMSIS/Device/ST/STM32F4xx/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/sysmem.d" -MT"Src/sysmem.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/sysmem.o"
+arm-none-eabi-gcc "../Src/systick.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32F401xE -c -I"C:/Users/manha/OneDrive/Desktop/STM32F401RE/chip_headers/CMSIS/Include" -I"C:/Users/manha/OneDrive/Desktop/STM32F401RE/chip_headers/CMSIS/Device/ST/STM32F4xx/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/systick.d" -MT"Src/systick.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/systick.o"
+arm-none-eabi-gcc "../Src/tim.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32F401xE -c -I"C:/Users/manha/OneDrive/Desktop/STM32F401RE/chip_headers/CMSIS/Include" -I"C:/Users/manha/OneDrive/Desktop/STM32F401RE/chip_headers/CMSIS/Device/ST/STM32F4xx/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/tim.d" -MT"Src/tim.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/tim.o"
+arm-none-eabi-gcc "../Src/uart.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32F401xE -c -I"C:/Users/manha/OneDrive/Desktop/STM32F401RE/chip_headers/CMSIS/Include" -I"C:/Users/manha/OneDrive/Desktop/STM32F401RE/chip_headers/CMSIS/Device/ST/STM32F4xx/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/uart.d" -MT"Src/uart.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/uart.o"
+arm-none-eabi-gcc -o "12_timers.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\manha\OneDrive\Desktop\STM32F401RE\12_timers\STM32F401RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="12_timers.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 12_timers.elf
  
-arm-none-eabi-size  11_systick_delay.elf 
-arm-none-eabi-objdump -h -S 11_systick_delay.elf  > "11_systick_delay.list"
+arm-none-eabi-size  12_timers.elf 
+arm-none-eabi-objdump -h -S 12_timers.elf  > "12_timers.list"
    text	   data	    bss	    dec	    hex	filename
-   5304	    100	   1900	   7304	   1c88	11_systick_delay.elf
+   5416	    100	   1900	   7416	   1cf8	12_timers.elf
 Finished building: default.size.stdout
  
-Finished building: 11_systick_delay.list
+Finished building: 12_timers.list
  
-15:46:21 **** Incremental Build of configuration Debug for project 11_systick_delay ****
+18:47:22 **** Incremental Build of configuration Debug for project 12_timers ****
 make -j12 all 
-arm-none-eabi-size  11_systick_delay.elf 
+arm-none-eabi-size  12_timers.elf 
    text	   data	    bss	    dec	    hex	filename
-   5304	    100	   1900	   7304	   1c88	11_systick_delay.elf
+   5416	    100	   1900	   7416	   1cf8	12_timers.elf
 Finished building: default.size.stdout
  
