@@ -53,7 +53,6 @@ int main(void){
 
 		printf("A second has passed \n\r");
 		GPIOA->ODR ^= LED_PIN;
-		systickDelayMS(1000);
 	}
 }
 
