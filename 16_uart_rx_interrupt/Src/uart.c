@@ -5,7 +5,7 @@
 ///	Following Section 3: UART (https://www.udemy.com/course/embedded-systems-bare-metal-programming/)
 
 ///	Purpose: Creating a Library for USART2 to transmit data via USB, using printf to send full sentences
-
+/// added interrupts for this version
 /// Author: Nubal Manhas
 
 /////////////////////////////////////////////////////////////////////////////
@@ -22,9 +22,7 @@
 #define CR1_TE				(1U<<3)//need to enable TX on USART control register (Section 19.6.4 in Reference Manual)
 #define CR1_UE				(1U<<13)//need to enable USART on USART control register
 #define CR1_RE				(1U<<2)//need to enable RX on USART control register
-
-#define SR_TXE				(1U<<7)//need to check empty status of transmit in USART status register
-#define SR_RXNE				(1U<<5)//need to check not empty status of receiver in USART SR
+#define CR1_RXNEIE			(1U<<5)//need to enable RX interrupt in CR1
 
 static void uart_set_baudrate(USART_TypeDef *USARTx, uint32_t PeriphClk, uint32_t BaudRate);
 static uint16_t compute_uart_bd(uint32_t PeriphClk, uint32_t BaudRate);
@@ -80,6 +78,55 @@ void uart2_rxtx_init(void)
 						  	  	  	 //want the rest of the register to be cleared, so it's intentionally "="
 						  	  	  	 //this also makes the word length 1 start bit, 8 data bits, n stop bits
 						  	  	  	 //with n = 0, since CR2 = 0 on bits 13:12, and even parity
+}
+
+//Function to initialize USART2 tx and rx, and interrupts on rx
+//Based on Table 9. in the Datasheet, TX = PA2 with AF07 as the alternate function selection
+//RX = PA3 with AF07
+void uart2_rx_interrupt(void)
+{
+	/*
+	 * Step 1: Configure GPIOA, with PA2 set to alternate function mode on AF7 (USART2)
+	 */
+	RCC->AHB1ENR |= GPIOAEN; //enable clock access to GPIOA, GPIOA is on AHB1 bus
+
+	//PA2 = MODER2 in GPIOA, alternate function mode = 10 on bits 5 and 4 (PA2) within MODER
+	//Based on Section 8.4.1 in Reference Manual
+	GPIOA->MODER &= ~(1U<<4);
+	GPIOA->MODER |= (1U<<5);
+
+	//PA3 = MODER3 in GPIOA, bits 6 and 7
+	GPIOA->MODER &= ~(1U<<6);
+	GPIOA->MODER |= (1U<<7);
+
+	//There's alternate function high and alternate function low registers for port x, the low
+	//is for the first 8 port x bits (0-7), high is for the latter 8 (8-15). Each one contains
+	//4 bits corresponding to each pin. Based on Section 8.4.9/8.4.10 in Reference Manual
+	GPIOA->AFR[0] |= (1U<<8); //AF07 = 0111
+	GPIOA->AFR[0] |= (1U<<9);
+	GPIOA->AFR[0] |= (1U<<10);
+	GPIOA->AFR[0] &= ~(1U<<11);
+
+	//do the same for PA3, starting bit = pin # * 4, so start on bit 12 and set to AF7
+	GPIOA->AFR[0] |= (1U<<12); //AF07 = 0111
+	GPIOA->AFR[0] |= (1U<<13);
+	GPIOA->AFR[0] |= (1U<<14);
+	GPIOA->AFR[0] &= ~(1U<<15);
+
+	/*
+	 * Step 2: Configure USART2
+	 */
+	RCC->APB1ENR |= UART2EN; //enable clock access to USART2, this is on the APB1 Bus
+	uart_set_baudrate(USART2, APB1_CLK, UART_BAUDRATE); //configure USART2 to 115200Hz
+
+	USART2->CR1 = (CR1_TE | CR1_RE | CR1_UE); //configuring transfer direction (TX + RX), based on Section 19.6.4 in Reference Manual
+						  	  	  	 //want the rest of the register to be cleared, so it's intentionally "="
+						  	  	  	 //this also makes the word length 1 start bit, 8 data bits, n stop bits
+						  	  	  	 //with n = 0, since CR2 = 0 on bits 13:12, and even parity
+
+	USART2->CR1 |= CR1_RXNEIE; //enable interrupt for rx
+
+	NVIC_EnableIRQ(USART2_IRQn); //enable UART2 interrupt in NVIC
 }
 
 //Function to read data register, when it's status is not empty

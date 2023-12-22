@@ -2,11 +2,10 @@
 
 /// Using: STM32F401 NUCLEO Board
 
-///	Following Section 6: General Purpose Timer Library (https://www.udemy.com/course/embedded-systems-bare-metal-programming/)
+///	Following Section 7: Interrupts (https://www.udemy.com/course/embedded-systems-bare-metal-programming/)
 
-///	Purpose: Testing a Library for TIM3 Timer Driver input capture mode by setting CH1 to capture on every
-/// rising edge. It will capture the input from the output compare on TIM2 CH1 by connecting a wire from
-/// PA5 to PA6 (check Figure 19 in user manual to see pinout).
+///	Purpose: Testing a Library for UART RX interrupt, using PA5 since that has the onboard LED
+///	configured on it. The interrupt will trigger when '1' is pressed, and the LED will turn on
 
 /// Author: Nubal Manhas
 
@@ -29,12 +28,14 @@
 #define PIN5						(1U<<5) //PIN5 based on ODR, since we want that as an output
 #define LED_PIN						PIN5
 
-static void exti_callback(void);
+char key;
+
+static void uart_callback(void);
 
 int main(void){
 
-	pc13_exti_init();
-	uart2_tx_init();
+
+	uart2_rx_interrupt();
 
 	/* Enable clock access to GPIOA*/
 	//don't just assign RCC_AHB1ENR = GPIOEN,
@@ -53,22 +54,29 @@ int main(void){
 	}
 }
 
-static void exti_callback(void)
+//callback function to be called by the interrupt handler
+static void uart_callback(void)
 {
-	printf("BTN Pressed \n\r");
-}
-
-//interrupt request handler, open startup -> stm32f401retx.s, and go to the g_pfnVectors part of the code
-//to see the appropriate name you would need for the interrupt handler depending on what you are using.
-//then create a function similar to this.
-void EXTI15_10_IRQHandler(void)
-{
-	//check if interrupt occurred
-	if((EXTI->PR & LINE13) != 0)
+	//turn LED on/off depending on what was read
+	if(key == '1')
 	{
-		//clear PR flag
-		EXTI->PR |= LINE13;
-		exti_callback();
+		GPIOA->ODR |= LED_PIN;
+	}
+	else
+	{
+		GPIOA->ODR &= ~LED_PIN;
 	}
 }
+
+//handler for USART2 Interrupt
+void USART2_IRQHandler(void)
+{
+	//check if RXNE is set
+	if(USART2->SR & SR_RXNE)
+	{
+		key = USART2->DR; //read usart data register
+		uart_callback();
+	}
+}
+
 
