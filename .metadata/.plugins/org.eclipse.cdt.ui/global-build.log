@@ -1,92 +1,21 @@
-18:45:07 **** Incremental Build of configuration Debug for project 17_uart_tx_interrupt ****
+15:50:39 **** Incremental Build of configuration Debug for project 17_adc_interrupt ****
 make -j12 all 
-arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32F401xE -c -I"C:/Users/manha/OneDrive/Desktop/STM32F401RE/chip_headers/CMSIS/Include" -I"C:/Users/manha/OneDrive/Desktop/STM32F401RE/chip_headers/CMSIS/Device/ST/STM32F4xx/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
-arm-none-eabi-gcc "../Src/uart.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32F401xE -c -I"C:/Users/manha/OneDrive/Desktop/STM32F401RE/chip_headers/CMSIS/Include" -I"C:/Users/manha/OneDrive/Desktop/STM32F401RE/chip_headers/CMSIS/Device/ST/STM32F4xx/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/uart.d" -MT"Src/uart.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/uart.o"
-arm-none-eabi-gcc -o "17_uart_tx_interrupt.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\manha\OneDrive\Desktop\STM32F401RE\17_uart_tx_interrupt\STM32F401RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="17_uart_tx_interrupt.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: 17_uart_tx_interrupt.elf
+arm-none-eabi-gcc "../Src/adc.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32F401xE -c -I"C:/Users/manha/OneDrive/Desktop/STM32F401RE/chip_headers/CMSIS/Include" -I"C:/Users/manha/OneDrive/Desktop/STM32F401RE/chip_headers/CMSIS/Device/ST/STM32F4xx/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/adc.d" -MT"Src/adc.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/adc.o"
+arm-none-eabi-gcc -o "17_adc_interrupt.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\manha\OneDrive\Desktop\STM32F401RE\17_adc_interrupt\STM32F401RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="17_adc_interrupt.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 17_adc_interrupt.elf
  
-arm-none-eabi-size  17_uart_tx_interrupt.elf 
-arm-none-eabi-objdump -h -S 17_uart_tx_interrupt.elf  > "17_uart_tx_interrupt.list"
+arm-none-eabi-size  17_adc_interrupt.elf 
+arm-none-eabi-objdump -h -S 17_adc_interrupt.elf  > "17_adc_interrupt.list"
    text	   data	    bss	    dec	    hex	filename
-   5392	    100	   1900	   7392	   1ce0	17_uart_tx_interrupt.elf
+   5448	    100	   1908	   7456	   1d20	17_adc_interrupt.elf
 Finished building: default.size.stdout
  
-Finished building: 17_uart_tx_interrupt.list
+Finished building: 17_adc_interrupt.list
  
-18:45:17 **** Incremental Build of configuration Debug for project 17_uart_tx_interrupt ****
+15:50:45 **** Incremental Build of configuration Debug for project 17_adc_interrupt ****
 make -j12 all 
-arm-none-eabi-size  17_uart_tx_interrupt.elf 
+arm-none-eabi-size  17_adc_interrupt.elf 
    text	   data	    bss	    dec	    hex	filename
-   5392	    100	   1900	   7392	   1ce0	17_uart_tx_interrupt.elf
+   5448	    100	   1908	   7456	   1d20	17_adc_interrupt.elf
 Finished building: default.size.stdout
- 
-18:46:44 **** Incremental Build of configuration Debug for project 17_uart_tx_interrupt ****
-make -j12 all 
-arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32F401xE -c -I"C:/Users/manha/OneDrive/Desktop/STM32F401RE/chip_headers/CMSIS/Include" -I"C:/Users/manha/OneDrive/Desktop/STM32F401RE/chip_headers/CMSIS/Device/ST/STM32F4xx/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
-arm-none-eabi-gcc -o "17_uart_tx_interrupt.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\manha\OneDrive\Desktop\STM32F401RE\17_uart_tx_interrupt\STM32F401RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="17_uart_tx_interrupt.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: 17_uart_tx_interrupt.elf
- 
-arm-none-eabi-size  17_uart_tx_interrupt.elf 
-arm-none-eabi-objdump -h -S 17_uart_tx_interrupt.elf  > "17_uart_tx_interrupt.list"
-   text	   data	    bss	    dec	    hex	filename
-   5376	    100	   1900	   7376	   1cd0	17_uart_tx_interrupt.elf
-Finished building: default.size.stdout
- 
-Finished building: 17_uart_tx_interrupt.list
- 
-18:48:19 **** Incremental Build of configuration Debug for project 17_uart_tx_interrupt ****
-make -j12 all 
-arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32F401xE -c -I"C:/Users/manha/OneDrive/Desktop/STM32F401RE/chip_headers/CMSIS/Include" -I"C:/Users/manha/OneDrive/Desktop/STM32F401RE/chip_headers/CMSIS/Device/ST/STM32F4xx/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
-arm-none-eabi-gcc -o "17_uart_tx_interrupt.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\manha\OneDrive\Desktop\STM32F401RE\17_uart_tx_interrupt\STM32F401RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="17_uart_tx_interrupt.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: 17_uart_tx_interrupt.elf
- 
-arm-none-eabi-size  17_uart_tx_interrupt.elf 
-arm-none-eabi-objdump -h -S 17_uart_tx_interrupt.elf  > "17_uart_tx_interrupt.list"
-   text	   data	    bss	    dec	    hex	filename
-   5460	    100	   1900	   7460	   1d24	17_uart_tx_interrupt.elf
-Finished building: default.size.stdout
- 
-Finished building: 17_uart_tx_interrupt.list
- 
-18:48:53 **** Incremental Build of configuration Debug for project 17_uart_tx_interrupt ****
-make -j12 all 
-arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32F401xE -c -I"C:/Users/manha/OneDrive/Desktop/STM32F401RE/chip_headers/CMSIS/Include" -I"C:/Users/manha/OneDrive/Desktop/STM32F401RE/chip_headers/CMSIS/Device/ST/STM32F4xx/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
-arm-none-eabi-gcc -o "17_uart_tx_interrupt.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\manha\OneDrive\Desktop\STM32F401RE\17_uart_tx_interrupt\STM32F401RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="17_uart_tx_interrupt.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: 17_uart_tx_interrupt.elf
- 
-arm-none-eabi-size  17_uart_tx_interrupt.elf 
-arm-none-eabi-objdump -h -S 17_uart_tx_interrupt.elf  > "17_uart_tx_interrupt.list"
-   text	   data	    bss	    dec	    hex	filename
-   5452	    100	   1900	   7452	   1d1c	17_uart_tx_interrupt.elf
-Finished building: default.size.stdout
- 
-Finished building: 17_uart_tx_interrupt.list
- 
-18:49:51 **** Incremental Build of configuration Debug for project 17_uart_tx_interrupt ****
-make -j12 all 
-arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32F401xE -c -I"C:/Users/manha/OneDrive/Desktop/STM32F401RE/chip_headers/CMSIS/Include" -I"C:/Users/manha/OneDrive/Desktop/STM32F401RE/chip_headers/CMSIS/Device/ST/STM32F4xx/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
-arm-none-eabi-gcc -o "17_uart_tx_interrupt.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\manha\OneDrive\Desktop\STM32F401RE\17_uart_tx_interrupt\STM32F401RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="17_uart_tx_interrupt.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: 17_uart_tx_interrupt.elf
- 
-arm-none-eabi-size  17_uart_tx_interrupt.elf 
-arm-none-eabi-objdump -h -S 17_uart_tx_interrupt.elf  > "17_uart_tx_interrupt.list"
-   text	   data	    bss	    dec	    hex	filename
-   5452	    100	   1900	   7452	   1d1c	17_uart_tx_interrupt.elf
-Finished building: default.size.stdout
- 
-Finished building: 17_uart_tx_interrupt.list
- 
-18:50:38 **** Incremental Build of configuration Debug for project 17_uart_tx_interrupt ****
-make -j12 all 
-arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32F401xE -c -I"C:/Users/manha/OneDrive/Desktop/STM32F401RE/chip_headers/CMSIS/Include" -I"C:/Users/manha/OneDrive/Desktop/STM32F401RE/chip_headers/CMSIS/Device/ST/STM32F4xx/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
-arm-none-eabi-gcc -o "17_uart_tx_interrupt.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\manha\OneDrive\Desktop\STM32F401RE\17_uart_tx_interrupt\STM32F401RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="17_uart_tx_interrupt.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: 17_uart_tx_interrupt.elf
- 
-arm-none-eabi-size  17_uart_tx_interrupt.elf 
-arm-none-eabi-objdump -h -S 17_uart_tx_interrupt.elf  > "17_uart_tx_interrupt.list"
-   text	   data	    bss	    dec	    hex	filename
-   5452	    100	   1900	   7452	   1d1c	17_uart_tx_interrupt.elf
-Finished building: default.size.stdout
- 
-Finished building: 17_uart_tx_interrupt.list
  
