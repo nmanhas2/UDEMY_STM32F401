@@ -1,21 +1,21 @@
-19:43:57 **** Incremental Build of configuration Debug for project 14_timer_input_capture ****
+17:35:38 **** Incremental Build of configuration Debug for project 15_input_interrupt ****
 make -j12 all 
-arm-none-eabi-gcc "../Src/tim.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32F401xE -c -I"C:/Users/manha/OneDrive/Desktop/STM32F401RE/chip_headers/CMSIS/Include" -I"C:/Users/manha/OneDrive/Desktop/STM32F401RE/chip_headers/CMSIS/Device/ST/STM32F4xx/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/tim.d" -MT"Src/tim.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/tim.o"
-arm-none-eabi-gcc -o "14_timer_input_capture.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\manha\OneDrive\Desktop\STM32F401RE\14_timer_input_capture\STM32F401RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="14_timer_input_capture.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: 14_timer_input_capture.elf
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32F401xE -c -I"C:/Users/manha/OneDrive/Desktop/STM32F401RE/chip_headers/CMSIS/Include" -I"C:/Users/manha/OneDrive/Desktop/STM32F401RE/chip_headers/CMSIS/Device/ST/STM32F4xx/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "15_input_interrupt.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\manha\OneDrive\Desktop\STM32F401RE\15_input_interrupt\STM32F401RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="15_input_interrupt.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 15_input_interrupt.elf
  
-arm-none-eabi-size  14_timer_input_capture.elf 
-arm-none-eabi-objdump -h -S 14_timer_input_capture.elf  > "14_timer_input_capture.list"
+arm-none-eabi-size  15_input_interrupt.elf 
+arm-none-eabi-objdump -h -S 15_input_interrupt.elf  > "15_input_interrupt.list"
    text	   data	    bss	    dec	    hex	filename
-    960	      8	   1568	   2536	    9e8	14_timer_input_capture.elf
+   5432	    100	   1900	   7432	   1d08	15_input_interrupt.elf
 Finished building: default.size.stdout
  
-Finished building: 14_timer_input_capture.list
+Finished building: 15_input_interrupt.list
  
-19:44:34 **** Incremental Build of configuration Debug for project 14_timer_input_capture ****
+17:35:45 **** Incremental Build of configuration Debug for project 15_input_interrupt ****
 make -j12 all 
-arm-none-eabi-size  14_timer_input_capture.elf 
+arm-none-eabi-size  15_input_interrupt.elf 
    text	   data	    bss	    dec	    hex	filename
-    960	      8	   1568	   2536	    9e8	14_timer_input_capture.elf
+   5432	    100	   1900	   7432	   1d08	15_input_interrupt.elf
 Finished building: default.size.stdout
  
