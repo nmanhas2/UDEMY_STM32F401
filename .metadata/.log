@@ -1471,3 +1471,6 @@ java.lang.Exception: Resource '/11_systick_interrupt' does not exist.
 
 !ENTRY org.eclipse.cdt.core 1 0 2023-12-22 15:57:05.392
 !MESSAGE Indexed '18_systick_interrupt' (6 sources, 67 headers) in 0.787 sec: 3,272 declarations; 5,625 references; 0 unresolved inclusions; 1 syntax errors; 2 unresolved names (0.022%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2023-12-22 16:13:39.921
+!MESSAGE Indexed '19_timer_interrupt' (7 sources, 67 headers) in 0.868 sec: 2,860 declarations; 4,218 references; 4 unresolved inclusions; 30 syntax errors; 583 unresolved names (7.6%)
