@@ -1268,3 +1268,6 @@ This warning can be switched off on the Team > Git > Confirmations and Warnings 
 
 !ENTRY org.eclipse.cdt.core 1 0 2023-12-21 17:40:03.392
 !MESSAGE Indexed '16_uart_rx_interrupt' (8 sources, 69 headers) in 0.884 sec: 3,294 declarations; 5,847 references; 0 unresolved inclusions; 1 syntax errors; 2 unresolved names (0.022%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2023-12-21 18:14:07.161
+!MESSAGE Indexed '17_uart_tx_interrupt' (8 sources, 69 headers) in 0.755 sec: 3,299 declarations; 5,976 references; 0 unresolved inclusions; 1 syntax errors; 2 unresolved names (0.022%)
