@@ -35,7 +35,7 @@ int main(void){
 
 	char message[35] = "Hello from Stm32 DMA Transmitter \n\r";
 	uart2_tx_init();
-	dma1_stream6_init((uint32_t)message, (uint32_t) &USART2->DR, 35);
+	dma1_stream6_init((uint32_t) &message[0], (uint32_t) &USART2->DR, 35);
 
 	/* Enable clock access to GPIOA*/
 	//don't just assign RCC_AHB1ENR = GPIOEN,
