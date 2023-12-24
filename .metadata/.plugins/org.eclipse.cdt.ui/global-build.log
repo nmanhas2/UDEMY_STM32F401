@@ -1,21 +1,21 @@
-16:20:50 **** Incremental Build of configuration Debug for project 19_timer_interrupt ****
+16:23:31 **** Incremental Build of configuration Debug for project 20_uart_tx_dma ****
 make -j12 all 
-arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32F401xE -c -I"C:/Users/manha/OneDrive/Desktop/STM32F401RE/chip_headers/CMSIS/Include" -I"C:/Users/manha/OneDrive/Desktop/STM32F401RE/chip_headers/CMSIS/Device/ST/STM32F4xx/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
-arm-none-eabi-gcc -o "19_timer_interrupt.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\manha\OneDrive\Desktop\STM32F401RE\19_timer_interrupt\STM32F401RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="19_timer_interrupt.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: 19_timer_interrupt.elf
+arm-none-eabi-gcc "../Src/uart.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32F401xE -c -I"C:/Users/manha/OneDrive/Desktop/STM32F401RE/chip_headers/CMSIS/Include" -I"C:/Users/manha/OneDrive/Desktop/STM32F401RE/chip_headers/CMSIS/Device/ST/STM32F4xx/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/uart.d" -MT"Src/uart.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/uart.o"
+arm-none-eabi-gcc -o "20_uart_tx_dma.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\manha\OneDrive\Desktop\STM32F401RE\20_uart_tx_dma\STM32F401RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="20_uart_tx_dma.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 20_uart_tx_dma.elf
  
-arm-none-eabi-size  19_timer_interrupt.elf 
-arm-none-eabi-objdump -h -S 19_timer_interrupt.elf  > "19_timer_interrupt.list"
+arm-none-eabi-size  20_uart_tx_dma.elf 
+arm-none-eabi-objdump -h -S 20_uart_tx_dma.elf  > "20_uart_tx_dma.list"
    text	   data	    bss	    dec	    hex	filename
-   5412	    100	   1900	   7412	   1cf4	19_timer_interrupt.elf
+   1332	      8	   1568	   2908	    b5c	20_uart_tx_dma.elf
 Finished building: default.size.stdout
  
-Finished building: 19_timer_interrupt.list
+Finished building: 20_uart_tx_dma.list
  
-16:20:57 **** Incremental Build of configuration Debug for project 19_timer_interrupt ****
+16:23:41 **** Incremental Build of configuration Debug for project 20_uart_tx_dma ****
 make -j12 all 
-arm-none-eabi-size  19_timer_interrupt.elf 
+arm-none-eabi-size  20_uart_tx_dma.elf 
    text	   data	    bss	    dec	    hex	filename
-   5412	    100	   1900	   7412	   1cf4	19_timer_interrupt.elf
+   1332	      8	   1568	   2908	    b5c	20_uart_tx_dma.elf
 Finished building: default.size.stdout
  
