@@ -31,7 +31,7 @@
 //capturing the count from the input capture, should increment by multiples of 1000
 //use debug -> live expressions to capture this variable
 int timestamp = 0;
-
+int are = 0;
 int main(void){
 	tim2_pa5_output_compare();
 	tim3_pa6_input_capture();
@@ -42,6 +42,7 @@ int main(void){
 
 		//read the value that was captured, based on section 13.4.13 in reference manual
 		timestamp = TIM3->CCR1;
+		are = TIM3->ARR;
 	}
 }
 
